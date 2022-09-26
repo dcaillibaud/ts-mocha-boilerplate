@@ -19,11 +19,14 @@
     "ts-mocha": "^10.0.0",
     "tsconfig-paths": "^4.1.0",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vite-tsconfig-paths": "^3.5.1"
   },
   "mocha": {
     "recursive": true,
     "reporter": "spec",
-    "extensions": ["ts"]
+    "extensions": [
+      "ts"
+    ]
   }
 }

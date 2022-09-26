@@ -1,7 +1,5 @@
-import { resolve } from 'path'
 import { defineConfig } from 'vite'
-
-const srcDir = resolve(__dirname, 'src')
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   root: __dirname,
@@ -10,12 +8,10 @@ export default defineConfig({
     assetsDir: 'build', // relatif au précédent, cf https://vitejs.dev/config/build-options.html#build-assetsdir
     target: 'modules' // https://vitejs.dev/config/build-options.html#build-target
   },
-  // cf https://vitejs.dev/config/shared-options.html#resolve-alias
-  resolve: {
-    alias: {
-      lib: resolve(srcDir, 'lib'),
-    }
-  },
+  // better to pick up our aliases from tsconfig (instead of duplicate aliases here, using resolve option)
+  plugins: [
+    tsconfigPaths()
+  ],
   server: {
     open: true
   }
