@@ -3,7 +3,7 @@ import { answer } from 'lib/counter'
 
 describe('mocha runs', () => {
   it('correctly', () => true)
-  it('and import with alias', () => {
+  it('resolve imports with aliases', () => {
     expect(answer()).to.equals(42)
   })
 })
