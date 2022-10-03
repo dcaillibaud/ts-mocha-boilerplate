@@ -5,6 +5,4 @@ This repo is a little reproduction repo to illustrate [ts-mocha issue #74](https
 
 Aliasing of 'lib/*' to 'src/lib' is ok for the vite build, but I didn't find how to setup this alias in mocha config (or tsconfig ?).
 
-I made a lot of tries in tsconfig without success.
-
-Renaming `test/main.test.js` into `test/main.test.ts` doesn't works (=> "No test files found", and running explicitly `ts-mocha -p tsconfig.json --paths test/main.test.ts` throw an Unknown file extension ".ts" error), but it's not an alias related pb, let's see this later.
+The branch `solved` show a working solution, either with [node subpath imports](https://nodejs.org/dist/latest/docs/api/packages.html#subpath-imports), or with the link protocol, but it's still broken when importing js file into a ts file (within this aliased lib directory) 
