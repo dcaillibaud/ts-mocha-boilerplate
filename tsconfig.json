@@ -20,7 +20,7 @@
     // and https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping
     "baseUrl": "./src/",
     "paths": {
-      "#lib/*": ["lib/*"]
+      "lib/*": ["lib/*"]
     }
   },
   "include": ["src"]

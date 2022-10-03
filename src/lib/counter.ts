@@ -1,4 +1,4 @@
-import { response } from '#lib/question'
+import { response } from 'lib/question'
 
 export function setupCounter(element: HTMLButtonElement) {
   let counter = 0

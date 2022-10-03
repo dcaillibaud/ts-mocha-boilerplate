@@ -4,14 +4,14 @@
   "license": "AGPL-3",
   "version": "0.0.1",
   "type": "module",
-  "imports": {
-    "#lib/*": "./src/lib/*"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha 'test/**/*.test.*'"
+  },
+  "dependencies": {
+    "lib": "link:./src/lib"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
