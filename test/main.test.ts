@@ -5,5 +5,6 @@ describe('mocha runs', () => {
   it('correctly', () => true)
   it('resolve imports with aliases', () => {
     expect(answer()).to.equals(42)
+    // expect(otherResponse()).to.equals(24)
   })
 })

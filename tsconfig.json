@@ -23,8 +23,5 @@
       "#lib/*": ["lib/*"]
     }
   },
-  "include": ["src"],
-  "paths": {
-    "#lib/*": ["lib/*"]
-  }
+  "include": ["src"]
 }

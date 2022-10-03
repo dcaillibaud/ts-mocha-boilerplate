@@ -1,3 +1,5 @@
+// import { response } from '#lib/question'
+
 export function setupCounter(element: HTMLButtonElement) {
   let counter = 0
   const setCounter = (count: number) => {
@@ -11,3 +13,7 @@ export function setupCounter(element: HTMLButtonElement) {
 export function answer () {
   return 42
 }
+
+// export function otherResponse () {
+//   return response()
+// }
