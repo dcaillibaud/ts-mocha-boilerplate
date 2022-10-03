@@ -15,12 +15,16 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "baseUrl": "src",
+    "allowJs": true,
     // cf https://www.typescriptlang.org/tsconfig#paths
     // and https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping
+    "baseUrl": "./src/",
     "paths": {
-      "lib/*": ["./lib/*"]
-    },
+      "#lib/*": ["lib/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "paths": {
+    "#lib/*": ["lib/*"]
+  }
 }

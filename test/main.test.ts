@@ -1,5 +1,5 @@
+import { answer } from '#lib/counter'
 import { expect } from 'chai'
-import { answer } from 'lib/counter'
 
 describe('mocha runs', () => {
   it('correctly', () => true)
