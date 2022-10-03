@@ -1,4 +1,4 @@
-// import { response } from '#lib/question'
+import { response } from '#lib/question'
 
 export function setupCounter(element: HTMLButtonElement) {
   let counter = 0
@@ -14,6 +14,6 @@ export function answer () {
   return 42
 }
 
-// export function otherResponse () {
-//   return response()
-// }
+export function otherResponse () {
+  return response()
+}
