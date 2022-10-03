@@ -15,17 +15,23 @@
     "@types/mocha": "^9.1.1",
     "@types/node": "^18.7.21",
     "chai": "^4.3.6",
+    "json5": "^2.2.1",
     "mocha": "^10.0.0",
-    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
     "vite-tsconfig-paths": "^3.5.1"
   },
   "mocha": {
+    "require": [
+      "ts-node/register",
+      "tsconfig-paths/register"
+    ],
     "recursive": true,
     "reporter": "spec",
     "extensions": [
+      "js",
       "ts"
     ]
   }
