@@ -26,7 +26,7 @@ in package.json
     "extensions": ["js", "ts"]
   }
 ```
-then `mocha test/main.test.js` => `Error: Cannot find package 'lib' imported from /…/ts-mocha-boilerplate/test/main.test.js
+then `mocha test/main.test.js` => `Error: Cannot find package 'lib' imported from /{absRootDir}/test/main.test.js
 Did you mean to import lib/counter.ts?`
 
 2) with manual run in `test/init.js`
@@ -58,6 +58,7 @@ mocha.run((failures) => {
   })
 })
 ```
-running `node test/init.js` throws `require() of ES Module /…/test/main.test.js from /…/node_modules/.pnpm/mocha@10.0.0/node_modules/mocha/lib/mocha.js not supported.`
+running `node test/init.js` throws `require() of ES Module /{absRootDir}/test/main.test.js from /{absRootDir}/node_modules/.pnpm/mocha@10.0.0/node_modules/mocha/lib/mocha.js not supported.`
+(adding `loader: "ts-node/esm"` doesn't solve this pb)
 
-3) with a specific `tsconfig.test.json` (with cjs as compilerOptions), running `TS_NODE_PROJECT=tsconfig.test.json mocha test/main.test.js` also throws `Cannot find package 'lib' imported from /…/test/main.test.js`
+3) with a specific `tsconfig.test.json` (with cjs as compilerOptions), running `TS_NODE_PROJECT=tsconfig.test.json mocha test/main.test.js` also throws `Cannot find package 'lib' imported from /{absRootDir}/test/main.test.js`
