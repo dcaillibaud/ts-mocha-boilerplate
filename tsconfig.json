@@ -23,5 +23,10 @@
       "lib/*": ["lib/*"]
     }
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "test/**/*.test.ts",
+    "test/**/*.test.js"
+  ]
 }
