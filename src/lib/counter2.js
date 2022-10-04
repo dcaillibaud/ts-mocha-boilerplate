@@ -7,3 +7,7 @@ export function setupCounter(element) {
   element.addEventListener('click', () => setCounter(++counter))
   setCounter(0)
 }
+
+export function answer2 () {
+  return 442
+}
