@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 
-import { answer } from 'lib/counter'
-import { response } from 'lib/question'
+import { answer } from 'lib/counter.js'
+import { response } from 'lib/question.js'
 
 describe('mocha runs', () => {
   it('correctly', () => true)
